@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model MyScriptureJournal.Pages.Scriptures.IndexModel
 @{
     ViewData["Title"] = "Index";
@@ -9,6 +9,7 @@
 <p>
 <a asp-page="AddEntry">Add New Entry</a>
 </p>
+
 <form>
     <p>
         Filter By Book: <select asp-for="ScriptureBook" asp-items="Model.Books">
@@ -24,10 +25,14 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].EntryDate)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.EntryDateSort">
+                    @Html.DisplayNameFor(model => model.Scripture[0].EntryDate)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Scripture[0].Book)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.BookSort">
+                    @Html.DisplayNameFor(model => model.Scripture[0].Book)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Scripture[0].Chapter)
