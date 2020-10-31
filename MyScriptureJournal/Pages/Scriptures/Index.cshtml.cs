@@ -58,7 +58,7 @@ namespace MyScriptureJournal.Pages.Scriptures
                     scriptures1 = scriptures1.OrderBy(s => s.EntryDate);
                     break;
                 case "date_desc":
-                    scriptures1 = scriptures1.OrderBy(s => s.EntryDate);
+                    scriptures1 = scriptures1.OrderByDescending(s => s.EntryDate);
                     break;
 
                 default:

@@ -3,46 +3,50 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+<head>
+    <link rel="stylesheet" href="~/css/background.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
 <h1>Details</h1>
-
-<div>
-    <h4>Scripture</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.EntryDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.EntryDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.Book)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.Book)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.Chapter)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.Chapter)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.Verse)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.Verse)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.JournalEntry)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.JournalEntry)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./EditEntry" asp-route-id="@Model.Scripture.ID">Edit</a> |
-    <a asp-page="./Index">Back to Scripture Entry List</a>
-</div>
+<body>
+    <div>
+        <h4>Scripture</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Scripture.EntryDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Scripture.EntryDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Scripture.Book)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Scripture.Book)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Scripture.Chapter)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Scripture.Chapter)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Scripture.Verse)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Scripture.Verse)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Scripture.JournalEntry)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Scripture.JournalEntry)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./EditEntry" asp-route-id="@Model.Scripture.ID">Edit</a> |
+        <a asp-page="./Index">Back to Scripture Entry List</a>
+    </div>
+</body>

@@ -3,50 +3,53 @@
 @{
     ViewData["Title"] = "AddEntry";
 }
-
+<head>
+    <link rel="stylesheet" href="~/css/background.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
 <h1> Add Entry </h1>
-
-<h4> Scripture </h4>
-<hr />
-<div class ="row">
-    <div class ="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Scripture.EntryDate" class="control.label"></label>
-                <input asp-for="Scripture.EntryDate" class="form-control" />
-                <span asp-validation-for="Scripture.EntryDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Scripture.Book" class="control.label"></label>
-                <input asp-for="Scripture.Book" class="form-control" />
-                <span asp-validation-for="Scripture.Book" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Scripture.Chapter" class="control.label"></label>
-                <input asp-for="Scripture.Chapter" class="form-control" />
-                <span asp-validation-for="Scripture.Chapter" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Scripture.Verse" class="control.label"></label>
-                <input asp-for="Scripture.Verse" class="form-control" />
-                <span asp-validation-for="Scripture.Verse" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Scripture.JournalEntry" class="control.label"></label>
-                <input asp-for="Scripture.JournalEntry" class="form-control" />
-                <span asp-validation-for="Scripture.JournalEntry" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Add Entry" class="btn btn-primary" />
-            </div>
-        </form>
+<body>
+    <h4> Scripture </h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Scripture.EntryDate" class="control.label"></label>
+                    <input asp-for="Scripture.EntryDate" class="form-control" />
+                    <span asp-validation-for="Scripture.EntryDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Scripture.Book" class="control.label"></label>
+                    <input asp-for="Scripture.Book" class="form-control" />
+                    <span asp-validation-for="Scripture.Book" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Scripture.Chapter" class="control.label"></label>
+                    <input asp-for="Scripture.Chapter" class="form-control" />
+                    <span asp-validation-for="Scripture.Chapter" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Scripture.Verse" class="control.label"></label>
+                    <input asp-for="Scripture.Verse" class="form-control" />
+                    <span asp-validation-for="Scripture.Verse" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Scripture.JournalEntry" class="control.label"></label>
+                    <input asp-for="Scripture.JournalEntry" class="form-control" />
+                    <span asp-validation-for="Scripture.JournalEntry" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Entry" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<div>
-    <a asp-page="Index">Back to Entry List</a>
-</div>
-
+    <div>
+        <a asp-page="Index">Back to Entry List</a>
+    </div>
+</body>
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
